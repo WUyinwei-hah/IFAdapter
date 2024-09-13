@@ -11,8 +11,8 @@ Yinwei Wu<sup>1,2</sup>&emsp;Xianpan Zhou<sup>1</sup>&emsp;Bing Ma<sup>1</sup>&e
     <sup>&dagger;</sup>corresponding author 
 </div> -->
 <div>
-<a target="_blank" href="https://arxiv.org/abs/2403.20249">
-  <img src="https://img.shields.io/badge/arXiv-2312.17142-b31b1b.svg" alt="arXiv Paper"/>
+<a target="_blank" href="https://arxiv.org/abs/2409.08240">
+  <img src="https://img.shields.io/badge/arXiv-2409.08240-b31b1b.svg" alt="arXiv Paper"/>
 </a>
 <a target="_blank" href="https://ifadapter.github.io/">
   <img src="https://img.shields.io/badge/Project-Page-blue" alt="arXiv Paper"/>
