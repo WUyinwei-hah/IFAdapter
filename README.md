@@ -55,5 +55,13 @@ We present the generation results for various types of features, including mixed
 The code is coming soon!
 # Citation
 ```
-
+@misc{ifadapter,
+      title={Relation Rectification in Diffusion Model}, 
+      author={Yinwei Wu and Xingyi Yang and Xinchao Wang},
+      year={2024},
+      eprint={2403.20249},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2403.20249}, 
+}
 ```
