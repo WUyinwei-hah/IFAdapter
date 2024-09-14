@@ -55,13 +55,10 @@ We present the generation results for various types of features, including mixed
 The code is coming soon!
 # Citation
 ```
-@misc{ifadapter,
-      title={Relation Rectification in Diffusion Model}, 
-      author={Yinwei Wu and Xingyi Yang and Xinchao Wang},
-      year={2024},
-      eprint={2403.20249},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2403.20249}, 
-}
+@article{wu2024ifadapter,
+        title={IFAdapter: Instance Feature Control for Grounded Text-to-Image Generation}, 
+        author={Yinwei Wu and Xianpan Zhou and Bing Ma and Xuefeng Su and Kai Ma and Xinchao Wang},
+        journal={arXiv preprint arXiv:2409.08240},
+        year={2024}
+  }
 ```
