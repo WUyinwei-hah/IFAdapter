@@ -1,0 +1,16 @@
+torch
+torchaudio
+torchvision
+accelerate
+flask
+flask_cors
+opencv-python
+einops
+transformers
+diffusers
+omegaconf
+scipy
+huggingface_hub
+peft
+pycocotools==2.0.8
+fonttools==4.58.0
