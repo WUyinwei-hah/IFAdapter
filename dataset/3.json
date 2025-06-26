@@ -1,0 +1,71 @@
+{
+  "caption": "three cats with hats",
+  "annotations": [
+    {
+      "box": [
+        150,
+        150,
+        150,
+        75
+      ],
+      "caption": [
+        "A orange hat"
+      ]
+    },
+    {
+      "box": [
+        300,
+        150,
+        150,
+        75
+      ],
+      "caption": [
+        "A white hat"
+      ]
+    },
+    {
+      "box": [
+        450,
+        150,
+        150,
+        75
+      ],
+      "caption": [
+        "A black hat"
+      ]
+    },
+    {
+      "box": [
+        135,
+        210,
+        180,
+        375
+      ],
+      "caption": [
+        "A black cat"
+      ]
+    },
+    {
+      "box": [
+        285,
+        210,
+        180,
+        375
+      ],
+      "caption": [
+        "A orange cat"
+      ]
+    },
+    {
+      "box": [
+        435,
+        210,
+        180,
+        375
+      ],
+      "caption": [
+        "A white cat"
+      ]
+    }
+  ]
+}

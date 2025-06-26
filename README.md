@@ -2,63 +2,64 @@
 
 <h1>IFAdapter: Instance Feature Control for Grounded Text-to-Image Generation</h1>
 
-<!-- <div>
+<div>
 Yinwei Wu<sup>1,2</sup>&emsp;Xianpan Zhou<sup>1</sup>&emsp;Bing Ma<sup>1</sup>&emsp;Xuefeng Su<sup>1</sup>&emsp;Kai Ma<sup>1</sup>&emsp;Xinchao Wang<sup>2</sup><sup>&dagger;</sup>
 </div>
 <div>
     <sup>1</sup>Tencent PGC&emsp;
     <sup>2</sup>National University of Singapore&emsp;
     <sup>&dagger;</sup>corresponding author 
-</div> -->
-<div>
-<a target="_blank" href="https://arxiv.org/abs/2409.08240">
-  <img src="https://img.shields.io/badge/arXiv-2409.08240-b31b1b.svg" alt="arXiv Paper"/>
-</a>
-<a target="_blank" href="https://ifadapter.github.io/">
-  <img src="https://img.shields.io/badge/Project-Page-blue" alt="arXiv Paper"/>
-</a>
 </div>
-<!-- <div> -->
-</div> 
 
+</div>
 
-<!-- <div>
-<a target="_blank" href="https://arxiv.org/abs/2403.20249">
-  <img src="https://img.shields.io/badge/arXiv-2312.17142-b31b1b.svg" alt="arXiv Paper"/>
-</a>
-
-<a target="_blank" href="https://wuyinwei-hah.github.io/rrnet.github.io/">
-  <img src="https://img.shields.io/badge/Project-Page-blue" alt="arXiv Paper"/>
-</a>
-</div>-->
-
-
-<!-- --- -->
-<!-- # Overview
+---
+## Overview
 ![overall_structure](./assets/fig1.png)
 
-We introduce the **I**nstance **F**eature **Adapter**(IFAdapter) to to exert fine-grained control over the generation of multiple instances. -->
+We introduce the **I**nstance **F**eature **Adapter**(IFAdapter) to to exert fine-grained control over the generation of multiple instances.
 
-<!-- # Feature -->
-
-<!-- ## Plug-and-play
+## Features
 The IFAdapter is readily integrated with various community models and LoRAs!
 ![loras](./assets/lora.png)
-We show the results of IFAdapter in combination with [PixelArt](https://civitai.com/models/120096/pixel-art-xl), [Lelo-Lego](https://civitai.com/models/92444/lelo-lego-lora-for-xl-and-sd15), [Claymation](https://huggingface.co/DoctorDiffusion/doctor-diffusion-s-claymation-style-lora), and [Bluepencil](https://civitai.com/models/119012/bluepencil-xl). We express our gratitude for these great work contributed by these communities! -->
+We show the results of IFAdapter in combination with [PixelArt](https://civitai.com/models/120096/pixel-art-xl), [Lelo-Lego](https://civitai.com/models/92444/lelo-lego-lora-for-xl-and-sd15), [Claymation](https://huggingface.co/DoctorDiffusion/doctor-diffusion-s-claymation-style-lora), and [Bluepencil](https://civitai.com/models/119012/bluepencil-xl). We express our gratitude for these great work contributed by these communities!
 
-<!-- 
-## Detailed features generation
-The IFAdapter is capable of generating detailed instance features with high fidelity.
-![compare](./assets/compare.png)
-We present the generation results for various types of features, including mixed colors, diverse materials, and intricate textures. -->
+## Quick Start
+1.
+Install the required dependencies
+```bash
+git clone https://github.com/WUyinwei-hah/IFAdapter.git
 
-The code is coming soon!
-# Citation
+cd IFAdapter
+
+pip install -r requirements.txt
+```
+
+2.
+
+Download the pretrained IFAdapter weight from [Google Drive](https://drive.google.com/file/d/1qRnwbefPjD0VZnDjcrFO1vdYg8D0lsJL/view?usp=sharing), and place it under `./pretrained_models`.
+
+## Generation
+
+1.
+Use the original SDXL for generation
+```python
+python3 infer.py
+```
+
+2.
+Use LORAs for generation
+```python
+python3 infer_loras.py
+```
+---
+
+## Citation
 ```
 @article{wu2024ifadapter,
-        title={IFAdapter: Instance Feature Control for Grounded Text-to-Image Generation}, 
-        author={Yinwei Wu and Xianpan Zhou and Bing Ma and Xuefeng Su and Kai Ma and Xinchao Wang},
-        journal={arXiv preprint arXiv:2409.08240},
-        year={2024}
-  }
+  title={Ifadapter: Instance feature control for grounded text-to-image generation},
+  author={Wu, Yinwei and Zhou, Xianpan and Ma, Bing and Su, Xuefeng and Ma, Kai and Wang, Xinchao},
+  journal={arXiv preprint arXiv:2409.08240},
+  year={2024}
+}
 ```

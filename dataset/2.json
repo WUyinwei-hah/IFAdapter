@@ -1,0 +1,38 @@
+{
+    "caption": "A dog is surfing in the sea",
+    "annotations": [
+      {
+        "box": [
+          151,
+          291,
+          510,
+          330
+        ],
+        "caption": [
+          "a wet dog wearing a yellow shirt is on a surfboard"
+        ]
+      },
+      {
+        "box": [
+          87,
+          546,
+          630,
+          165
+        ],
+        "caption": [
+          "a blue surfboard is riding a wave"
+        ]
+      },
+      {
+        "box": [
+          46,
+          97,
+          705,
+          645
+        ],
+        "caption": [
+          "sea wave"
+        ]
+      }
+    ]
+  }

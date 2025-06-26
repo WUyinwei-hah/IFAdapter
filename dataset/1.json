@@ -1,0 +1,49 @@
+{
+  "caption": "Three flowers in a vase on the table",
+  "annotations": [
+    {
+      "box": [
+        126,
+        309,
+        210,
+        150
+      ],
+      "caption": [
+        "a pink flower with a yellow center"
+      ]
+    },
+    {
+      "box": [
+        264,
+        91,
+        270,
+        225
+      ],
+      "caption": [
+        "a purple flower with a white center"
+      ]
+    },
+    {
+      "box": [
+        450,
+        345,
+        225,
+        225
+      ],
+      "caption": [
+        "a yellow flower with a red center"
+      ]
+    },
+    {
+      "box": [
+        225,
+        495,
+        255,
+        240
+      ],
+      "caption": [
+        "a colorful vase"
+      ]
+    }
+  ]
+}
