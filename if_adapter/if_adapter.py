@@ -2,6 +2,7 @@ import os
 import requests
 from typing import List
 from urllib.parse import urlparse
+from tqdm import tqdm
 
 import torch
 from diffusers import StableDiffusionPipeline
@@ -67,9 +68,15 @@ class IFAdapter(torch.nn.Module):
                     response = requests.get(ckpt_path, stream=True)
                     response.raise_for_status()
                     
+                    # Get total file size
+                    total_size = int(response.headers.get('content-length', 0))
+                    
                     with open(local_path, 'wb') as f:
-                        for chunk in response.iter_content(chunk_size=8192):
-                            f.write(chunk)
+                        with tqdm(total=total_size, unit='B', unit_scale=True, desc="Downloading model") as pbar:
+                            for chunk in response.iter_content(chunk_size=8192):
+                                if chunk:
+                                    f.write(chunk)
+                                    pbar.update(len(chunk))
                     
                     print(f"Model download completed: {local_path}")
                     ckpt_path = local_path
