@@ -25,7 +25,7 @@ The IFAdapter is readily integrated with various community models and LoRAs!
 We show the results of IFAdapter in combination with [PixelArt](https://civitai.com/models/120096/pixel-art-xl), [Lelo-Lego](https://civitai.com/models/92444/lelo-lego-lora-for-xl-and-sd15), [Claymation](https://huggingface.co/DoctorDiffusion/doctor-diffusion-s-claymation-style-lora), and [Bluepencil](https://civitai.com/models/119012/bluepencil-xl). We express our gratitude for these great work contributed by these communities!
 
 ## Quick Start
-1.
+
 Install the required dependencies
 ```bash
 git clone https://github.com/WUyinwei-hah/IFAdapter.git
@@ -34,10 +34,6 @@ cd IFAdapter
 
 pip install -r requirements.txt
 ```
-
-2.
-
-Download the pretrained IFAdapter weight from [Google Drive](https://drive.google.com/file/d/1qRnwbefPjD0VZnDjcrFO1vdYg8D0lsJL/view?usp=sharing), and place it under `./pretrained_models`.
 
 ## Generation
 

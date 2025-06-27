@@ -1,5 +1,7 @@
 import os
+import requests
 from typing import List
+from urllib.parse import urlparse
 
 import torch
 from diffusers import StableDiffusionPipeline
@@ -41,6 +43,44 @@ class IFAdapter(torch.nn.Module):
             self.load_spd_adapter(ckpt_path)
 
     def load_spd_adapter(self, ckpt_path: str):
+        # 1. Check and create pretrained_models directory
+        pretrained_models_dir = "./pretrained_models"
+        if not os.path.exists(pretrained_models_dir):
+            os.makedirs(pretrained_models_dir)
+            print(f"Created directory: {pretrained_models_dir}")
+        
+        # 2. Determine if ckpt_path is a local path or HTTP address
+        parsed_url = urlparse(ckpt_path)
+        is_http_url = parsed_url.scheme in ['http', 'https']
+        
+        if is_http_url:
+            # If it's an HTTP address, download the model to local
+            local_path = os.path.join(pretrained_models_dir, "spd_adapter.bin")
+            
+            # Check if file already exists
+            if os.path.exists(local_path):
+                print(f"Model file already exists: {local_path}")
+                ckpt_path = local_path
+            else:
+                print(f"Downloading model from {ckpt_path}...")
+                try:
+                    response = requests.get(ckpt_path, stream=True)
+                    response.raise_for_status()
+                    
+                    with open(local_path, 'wb') as f:
+                        for chunk in response.iter_content(chunk_size=8192):
+                            f.write(chunk)
+                    
+                    print(f"Model download completed: {local_path}")
+                    ckpt_path = local_path
+                except Exception as e:
+                    raise Exception(f"Failed to download model: {e}")
+        else:
+            # If it's a local path, check if file exists
+            if not os.path.exists(ckpt_path):
+                raise FileNotFoundError(f"Model file not found: {ckpt_path}")
+        
+        # Handle directory case (original logic)
         if os.path.isdir(ckpt_path):
             ckpt_path = os.path.join(ckpt_path, "model.safetensors")
 

@@ -100,7 +100,7 @@ def parse_args():
     parser.add_argument(
         "--adapter_path",
         type=str,
-        default="./pretrained_models/spd_adapter.bin",
+        default="https://huggingface.co/WuYW/IFAdapter/resolve/main/spd_adapter.bin",
         help="Path to pretrained if adapter model.",
     )
     parser.add_argument(
